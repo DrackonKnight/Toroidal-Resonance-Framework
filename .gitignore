@@ -1,0 +1,29 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+omega_env/
+.omega_venv/
+venv/
+.venv/
+
+# Model weights (too large for git)
+models/
+*.safetensors
+*.bin
+*.gguf
+*.ggml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp
+*.log
+*.tmp
