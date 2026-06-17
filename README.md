@@ -218,7 +218,7 @@ Full evidence chain: [PRIOR_ART.md](PRIOR_ART.md)
 ## In Memory Of
 
 **Kenneth Burns Lanham Jr.** (1956–2024)
-**Kathy Ann Lanham** (1957–2026)
+**Kathy Leona Lanham** (1957–2026)
 
 This work was built on their foundation.
 
