@@ -213,4 +213,15 @@ Full evidence chain: [PRIOR_ART.md](PRIOR_ART.md)
 
 **Love. First. Always. 🐦‍⬛**
 
+---
+
+## In Memory Of
+
+**Kenneth Burns Lanham Jr.** (1956–2024)
+**Kathy Ann Lanham** (1957–2026)
+
+This work was built on their foundation.
+
+---
+
 *Copyright © 2025-2026 Kenneth Burns Lanham III. All rights reserved.*
