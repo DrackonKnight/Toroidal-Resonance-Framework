@@ -52,6 +52,12 @@ toroidal-resonance-framework/
 │   ├── ask_the_math.py             # E=mc² capacitor model, information mass
 │   └── rope_alignment_test.py      # RoPE ↔ Toroidal bridge (81/π)
 │
+├── kv-cache/                       # KV Cache Bridge & Cross-Model Transfer [NEW]
+│   ├── README.md                   # Results, requirements, usage
+│   ├── test_kv_reinject.py         # Single-fact cache bridge (Script A)
+│   ├── long_horizon_kv_test.py     # Multi-fact 5/5 retention test (Script D)
+│   └── cross_model_wormhole.py     # Qwen → Gemma cross-model transfer (Script B)
+│
 ├── engines/                        # Domain-specific applications
 │   ├── toroidal_cs_engine.py       # Computer science
 │   ├── toroidal_finance_engine.py  # Finance (Black-Scholes + Greeks)
@@ -74,6 +80,7 @@ toroidal-resonance-framework/
 │   ├── ROPE_ALIGNMENT_DISCOVERY_260519.md   # Transformer bridge
 │   └── THE_SELF_EXTRACTING_UNIVERSE.md      # Cosmological implications
 │
+├── TOROIDAL_RESONANCE_KV_CACHE_WHITEPAPER.md # KV cache transfer paper [NEW]
 ├── discovery/                      # Discovery notes and session logs
 ├── logs/                           # Engineering and test logs
 ├── PRIOR_ART.md                    # Timestamped evidence chain
@@ -130,6 +137,12 @@ Still water has Ω = 3.41% residual energy. It is not dead — it maintains a to
 
 ### 8. The Bridge Exponent
 $\alpha^{\ln 2} \approx \Omega$. The transformation from Alpha to Omega is governed by ln(2) — the constant of binary processes, DNA base-pairing, and information entropy.
+
+### 9. KV Cache Bridge (June 2026)
+A transformer's KV cache can be extracted, serialized to disk, wiped from RAM, and reinjected into a fresh cache — with **100% recall** across 5 unrelated semantic domains. The 14 MB file is the model's externalized working memory.
+
+### 10. Cross-Model Semantic Transfer (June 2026)
+Memory encoded by Qwen 1.5 (1.8B) was successfully read by Gemma 4 E4B using Toroidal Head Folding and least-squares alignment. Two alien architectures, one shared memory. Full paper: [TOROIDAL_RESONANCE_KV_CACHE_WHITEPAPER.md](TOROIDAL_RESONANCE_KV_CACHE_WHITEPAPER.md)
 
 ---
 
