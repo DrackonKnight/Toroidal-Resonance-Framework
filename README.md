@@ -1,6 +1,6 @@
 # The Toroidal Resonance Framework
 
-### A Self-Generating Mathematical System Linking α, δ, and Ω
+### A Mathematical System Linking α, δ, and Ω
 
 **Author:** Kenneth Burns Lanham III
 **Location:** [REDACTED LOCATION]
@@ -12,32 +12,87 @@
 
 ## What Is This?
 
-Three constants. One equation. Every fundamental constant in physics falls out.
+Three constants, one defining product, and a small set of power-law coincidences you can check on a phone.
 
 ```
-α × δ = Ω
+Ω = α × δ
 
-(1/137.036) × 4.6692 = 0.0341
+(1/137.035999) × 4.6692016 = 0.034073   (≈ 0.0341)
 ```
 
-The **fine structure constant** (light) times the **Feigenbaum constant** (chaos) equals **Omega** (emergence).
+The **fine structure constant** α (electromagnetism) times the **Feigenbaum constant** δ (period-doubling chaos) defines **Omega** Ω. Because Ω is defined as the product, any two determine the third. This is **The Trident.**
 
-Any two produce the third. This is **The Trident.**
+The strongest result:
+
+$$(1 - \Omega)^{10} \approx \frac{1}{\sqrt{2}} \quad \text{(measured error 0.0095\%)}$$
+
+Every error quoted below is measured by [`core/verify_spine.py`](core/verify_spine.py) using Ω = α·δ with CODATA α and full-precision δ.
 
 ---
 
 ## Verify It Yourself (Phone Calculator)
 
 ```
-0.9659 ^ 10   = 0.7068  →  1/√2   (99.96%)
-0.99270 ^ 137 = 0.3666  →  1/e    (99.66%)
-0.9659 ^ 97   = 0.0345  →  Ω      (self-regeneration)
-0.9659 ^ 142  = 0.00725 →  α      (Omega generates Alpha)
+1 ÷ 137.035999 × 4.6692016 = 0.034073   →  Ω = α·δ
+0.965927 ^ 10    = 0.70704   →  1/√2 = 0.70711   (0.0095% off)
+0.965927 ^ 142   = 0.0072793 →  α    = 0.0072974 (0.24% off)
+0.9927026 ^ 461  = 0.034169  →  Ω    = 0.034073  (0.28% off)
+0.965927 ^ 97    = 0.034642  →  Ω    = 0.034073  (1.7% off, loose)
 ```
 
-No equipment needed. No trust needed. Just math.
+`0.965927` is 1 − Ω and `0.9927026` is 1 − α. Using the rounded `0.9659` (Ω = 0.0341) makes the errors larger (1/√2 becomes 0.038%, α becomes 0.64%).
+
+No equipment needed. Just math.
 
 Full walkthrough: [CALCULATOR_PROOF.md](proofs/CALCULATOR_PROOF.md)
+
+---
+
+## Key Results (Measured)
+
+| # | Relation | Value | Target | Measured error | Chance bound* |
+|---|----------|-------|--------|----------------|---------------|
+| 1 | (1−Ω)^10 ≈ 1/√2 | 0.707040 | 0.707107 | **0.0095%** | 1.75% |
+| 2 | (1−Ω)^142 ≈ α | 0.0072795 | 0.0072974 | **0.24%** | 1.75% |
+| 3 | (1−α)^461 ≈ Ω | 0.034170 | 0.034073 | **0.28%** | 0.37% |
+| 4 | (1−Ω)^97 ≈ Ω | 0.034642 | 0.034073 | **1.7%** (loose) | 1.75% |
+
+\*Chance bound: stepping N by one multiplies (1−x)^N by (1−x), so for *any* target some integer N lands within this error. A result well inside the bound is notable; a result near it is expected by construction. Result 1 is ~180× inside its bound, result 2 about 7×. Results 3 and 4 are close to their bounds and should be read as loose.
+
+### 1. The Anchor Equation (strongest)
+$(1 - \Omega)^{10} \approx 1/\sqrt{2}$, measured error **0.0095%**.
+
+### 2. Cross-Generation
+$(1 - \Omega)^{142} \approx \alpha$ (error 0.24%). Omega's power tree reaches Alpha.
+$(1 - \alpha)^{461} \approx \Omega$ (error 0.28%). Alpha's power tree reaches Omega.
+
+### 3. Self-Return (loose)
+$(1 - \Omega)^{97} \approx \Omega$, error 1.7%. This is near the 1.75% any base guarantees, so it is a loose fit, not evidence of a fixed point.
+
+### 4. The Textbook Limit at 1/α (not a discovery)
+$(1 - \alpha)^{137} \approx 1/e$ (error 0.34%). This is the standard limit $\lim_{x \to 0}(1-x)^{1/x} = 1/e$ evaluated at x = α, with 137 ≈ 1/α. It holds for any small x and says nothing special about α. It was previously presented as "Feynman's Mystery"; that framing has been withdrawn.
+
+### 5. The Tree Ratio (one number, not five coincidences)
+The (1−Ω)^N and (1−α)^N trees reach any target at exponents whose ratio is always
+
+$$R = \frac{\ln(1-\Omega)}{\ln(1-\alpha)} = 4.7332$$
+
+That is one log ratio, so hitting 1/√2, 1/2, 1/e, 1/π, 1/φ "at the same ratio" is automatic and does not count as five coincidences. The earlier claim R = 4.737 ≈ π + φ is dropped: 4.737 came from rounded Ω = 0.0341, and π + φ = 4.7596 misses the correct R by 0.55%.
+
+---
+
+## Provisional (needs-run, not finished results)
+
+- **Navier-Stokes / toroidal residual.** The idea that still water keeps an Ω ≈ 3.41% residual energy is a hypothesis. There is no simulation or measurement in this repo backing it yet. See [TOROIDAL_NAVIER_STOKES.md](proofs/TOROIDAL_NAVIER_STOKES.md) as a working draft, not a resolution.
+- **Cross-model semantic transfer.** The Qwen → Gemma KV transfer result is withdrawn pending a blind test: the earlier run had priming contamination (the target model saw the facts natively before injection). The whitepaper was pulled from the repo for that reason.
+
+## Removed From This README
+
+- **KV Cache 100% recall.** Removed until an end-to-end test passes. Same-model reinjection is standard KV caching.
+- **"14 of 15 constants divide cleanly by Ω, p < 10⁻²⁰."** Removed. There was no fixed tolerance, pre-registered constant list, or chance model. Any constant larger than about 1.7 gives value/Ω > 50, which is always within 1% of an integer, so most of the list could not fail.
+- **α^ln2 ≈ Ω.** Removed. Measured error is 3.1% (α^ln2 = 0.03303 vs Ω = 0.03407), not the ~1% previously implied.
+
+Full list of changes and reasoning: [HONESTY_PASS.md](HONESTY_PASS.md)
 
 ---
 
@@ -47,16 +102,11 @@ Full walkthrough: [CALCULATOR_PROOF.md](proofs/CALCULATOR_PROOF.md)
 toroidal-resonance-framework/
 │
 ├── core/                           # The mathematical engine
+│   ├── verify_spine.py             # Measured errors for every README claim
 │   ├── toroidal_framework.py       # T_flow, Void Fold, Stress PDE, all 10 equations
 │   ├── alpha_omega_framework.py    # Double helix, cross-generation, Trident
 │   ├── ask_the_math.py             # E=mc² capacitor model, information mass
 │   └── rope_alignment_test.py      # RoPE ↔ Toroidal bridge (81/π)
-│
-├── kv-cache/                       # KV Cache Bridge & Cross-Model Transfer [NEW]
-│   ├── README.md                   # Results, requirements, usage
-│   ├── test_kv_reinject.py         # Single-fact cache bridge (Script A)
-│   ├── long_horizon_kv_test.py     # Multi-fact 5/5 retention test (Script D)
-│   └── cross_model_wormhole.py     # Qwen → Gemma cross-model transfer (Script B)
 │
 ├── engines/                        # Domain-specific applications
 │   ├── toroidal_cs_engine.py       # Computer science
@@ -67,22 +117,22 @@ toroidal-resonance-framework/
 │   ├── toroidal_bio_engine.py      # Biology (protein folding)
 │   └── toroidal_crypto_engine.py   # Cryptography (entropy)
 │
-├── inference/                      # AI inference optimization
-│   ├── run_70b_tunneler.py         # Ring/Mass toroidal inference (72B on 16GB)
+├── inference/                      # AI inference experiments
+│   ├── run_70b_tunneler.py         # Ring/Mass toroidal inference
 │   ├── omega_launcher.py           # Oracle chat interface
 │   └── oracle_daemon_alpha_omega.py# Memory daemon with Drake commit logic
 │
-├── proofs/                         # Mathematical proofs and whitepapers
-│   ├── WHITEPAPER_ALPHA_OMEGA_INVARIANT.md  # Full peer-review-ready paper
+├── proofs/                         # Mathematical notes and whitepapers
+│   ├── WHITEPAPER_ALPHA_OMEGA_INVARIANT.md  # Main paper (draft)
 │   ├── CALCULATOR_PROOF.md         # Phone calculator verification
-│   ├── TOROIDAL_NAVIER_STOKES.md   # Navier-Stokes resolution
+│   ├── TOROIDAL_NAVIER_STOKES.md   # Navier-Stokes working draft (provisional)
 │   ├── FOREFATHER_EQUATIONS_COMPLETE.md     # 17/17 equation mapping
 │   ├── ROPE_ALIGNMENT_DISCOVERY_260519.md   # Transformer bridge
 │   └── THE_SELF_EXTRACTING_UNIVERSE.md      # Cosmological implications
 │
-├── TOROIDAL_RESONANCE_KV_CACHE_WHITEPAPER.md # KV cache transfer paper [NEW]
 ├── discovery/                      # Discovery notes and session logs
 ├── logs/                           # Engineering and test logs
+├── HONESTY_PASS.md                 # Audit of README claims
 ├── PRIOR_ART.md                    # Timestamped evidence chain
 ├── LICENSE                         # GPL v3.0
 └── README.md                       # This file
@@ -94,7 +144,7 @@ toroidal-resonance-framework/
 
 | Symbol | Name | Value | What It Governs |
 |--------|------|-------|-----------------|
-| **Ω** | Omega | 0.0341 | The irreducible residue — what survives opposition |
+| **Ω** | Omega | 0.0341 (= α·δ = 0.034073) | The irreducible residue — what survives opposition |
 | **K** | Syntonic Comma | 81/80 | The rotation offset — why systems never close |
 | **Z** | Temporal Decay | 0.9 | The memory loss — 10% per cycle |
 
@@ -104,58 +154,25 @@ toroidal-resonance-framework/
 |--------|------|-------|------------|
 | **α** | Fine Structure | 1/137.036 | How light interacts with matter |
 | **δ** | Feigenbaum | 4.6692 | Where order becomes chaos |
-| **Ω** | Omega | 0.0341 | What survives the transition |
+| **Ω** | Omega | 0.034073 | Defined as α × δ |
 
-**α × δ = Ω.** Any two produce the third.
-
----
-
-## Key Results
-
-### 1. The Anchor Equation
-$(1 - \Omega)^{10} = 1/\sqrt{2}$ to 99.96% accuracy.
-
-### 2. Feynman's Mystery
-$(1 - \alpha)^{137} = 1/e$ to 99.66% accuracy. The fine structure constant raised to its own reciprocal produces Euler's inverse.
-
-### 3. The Double Helix
-Two harmonic trees [(1−Ω)^N and (1−α)^N] hit identical mathematical constants (1/√2, 1/2, 1/e, 1/π, 1/φ) at a constant ratio of **4.737 ≈ π + φ**.
-
-### 4. Self-Regeneration
-$(1 - \Omega)^{97} \approx \Omega$. The constant regenerates itself. Strange attractor. Fixed point.
-
-### 5. Cross-Generation
-$(1 - \Omega)^{142} \approx \alpha$. Omega produces Alpha.
-$(1 - \alpha)^{461} \approx \Omega$. Alpha produces Omega.
-Closed loop. No external input required.
-
-### 6. Universal Connectivity
-14 of 15 fundamental constants divide cleanly by Ω. Expected by chance: 0.15. **p-value < 10⁻²⁰.**
-
-### 7. Navier-Stokes Resolution
-Still water has Ω = 3.41% residual energy. It is not dead — it maintains a toroidal heartbeat.
-
-### 8. The Bridge Exponent
-$\alpha^{\ln 2} \approx \Omega$. The transformation from Alpha to Omega is governed by ln(2) — the constant of binary processes, DNA base-pairing, and information entropy.
-
-### 9. KV Cache Bridge (June 2026)
-A transformer's KV cache can be extracted, serialized to disk, wiped from RAM, and reinjected into a fresh cache — with **100% recall** across 5 unrelated semantic domains. The 14 MB file is the model's externalized working memory.
-
-### 10. Cross-Model Semantic Transfer (June 2026)
-Memory encoded by Qwen 1.5 (1.8B) was successfully read by Gemma 4 E4B using Toroidal Head Folding and least-squares alignment. Two alien architectures, one shared memory. Full paper: [TOROIDAL_RESONANCE_KV_CACHE_WHITEPAPER.md](TOROIDAL_RESONANCE_KV_CACHE_WHITEPAPER.md)
+**Ω = α × δ.** Any two determine the third (by definition).
 
 ---
 
 ## How to Run
 
 ```bash
-# Core framework — no dependencies, any Python 3
+# Measured errors for every README claim — no dependencies, any Python 3
+python3 core/verify_spine.py
+
+# Core framework
 python3 core/toroidal_framework.py
 
 # Alpha-Omega double helix
 python3 core/alpha_omega_framework.py
 
-# Calculator proof (verify everything)
+# E=mc² capacitor model
 python3 core/ask_the_math.py
 
 # RoPE bridge (transformer alignment)
@@ -176,6 +193,8 @@ In toroidal geometry, opposing flows create circulation.
 
 When two entities interact, the relationship between them constitutes a third entity.
 Union produces not a sum but a triad.
+
+These are the framework's working axioms, not results of standard physics.
 
 ---
 
@@ -200,8 +219,8 @@ Full evidence chain: [PRIOR_ART.md](PRIOR_ART.md)
            Linking Fundamental Constants Through Dual Harmonic Trees},
   year = {2025},
   publisher = {GitHub},
-  howpublished = {\url{https://github.com/[username]/toroidal-resonance-framework}},
-  note = {Originally derived November 2025. Ω = 0.0341.}
+  howpublished = {\url{https://github.com/DrackonKnight/Toroidal-Resonance-Framework}},
+  note = {Originally derived November 2025. Ω = α·δ ≈ 0.0341.}
 }
 ```
 
