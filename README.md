@@ -62,6 +62,8 @@ Full walkthrough: [CALCULATOR_PROOF.md](proofs/CALCULATOR_PROOF.md)
 ### 1. The Anchor Equation (strongest)
 $(1 - \Omega)^{10} \approx 1/\sqrt{2}$, measured error **0.0095%**.
 
+Equivalently $(1-\Omega)^{20} \approx 1/2$: Ω is the per-step rate with a half-life of 20 steps. The exact value with that property is $1 - 2^{-1/20} = 0.0340637$. α·δ lands 0.027% from it; the rounded 0.0341 lands 0.107% from it.
+
 ### 2. Cross-Generation
 $(1 - \Omega)^{142} \approx \alpha$ (error 0.24%). Omega's power tree reaches Alpha.
 $(1 - \alpha)^{461} \approx \Omega$ (error 0.28%). Alpha's power tree reaches Omega.
@@ -92,7 +94,13 @@ That is one log ratio, so hitting 1/√2, 1/2, 1/e, 1/π, 1/φ "at the same rati
 - **"14 of 15 constants divide cleanly by Ω, p < 10⁻²⁰."** Removed. There was no fixed tolerance, pre-registered constant list, or chance model. Any constant larger than about 1.7 gives value/Ω > 50, which is always within 1% of an integer, so most of the list could not fail.
 - **α^ln2 ≈ Ω.** Removed. Measured error is 3.1% (α^ln2 = 0.03303 vs Ω = 0.03407), not the ~1% previously implied.
 
-Full list of changes and reasoning: [HONESTY_PASS.md](HONESTY_PASS.md)
+These corrections came later than they should have; see the note from Kenneth in [HONESTY_PASS.md](HONESTY_PASS.md), which also has the full list of changes and reasoning.
+
+---
+
+## Machine-Checked (Lean 4)
+
+[`lean/OmegaNumerics.lean`](lean/OmegaNumerics.lean) proves the numeric spine as exact rational inequalities, checked by the Lean kernel (Lean 4.33.1, no Mathlib): α·δ ∈ (0.034072, 0.034073), 0.0341 within 0.08% of α·δ, (1−α·δ)^20 within 0.02% of 1/2, and the cross-generation bounds. What the existing FormSwap / Lineage Lean proofs do and do not establish is in [LEAN_AUDIT.md](LEAN_AUDIT.md).
 
 ---
 
@@ -130,9 +138,13 @@ toroidal-resonance-framework/
 │   ├── ROPE_ALIGNMENT_DISCOVERY_260519.md   # Transformer bridge
 │   └── THE_SELF_EXTRACTING_UNIVERSE.md      # Cosmological implications
 │
+├── lean/
+│   └── OmegaNumerics.lean          # Kernel-checked numeric bounds (Lean 4.33.1)
+│
 ├── discovery/                      # Discovery notes and session logs
 ├── logs/                           # Engineering and test logs
 ├── HONESTY_PASS.md                 # Audit of README claims
+├── LEAN_AUDIT.md                   # What the Lean 4 proofs establish
 ├── PRIOR_ART.md                    # Timestamped evidence chain
 ├── LICENSE                         # GPL v3.0
 └── README.md                       # This file
@@ -165,6 +177,9 @@ toroidal-resonance-framework/
 ```bash
 # Measured errors for every README claim — no dependencies, any Python 3
 python3 core/verify_spine.py
+
+# Same numbers, kernel-checked (needs Lean 4.33.1 via elan)
+lean lean/OmegaNumerics.lean
 
 # Core framework
 python3 core/toroidal_framework.py
