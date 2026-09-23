@@ -16,7 +16,7 @@ The closed loop proves it: a self-generating system of constants that produces i
 ```
 1 + (-1) = Ω
 Ω = α × δ
-α^ln(2) ≈ Ω
+α^ln(2) ≈ Ω          (3.1% off; not claimed as a result, see HONESTY_PASS.md)
 ln(2) = ln(1+1)
 1 + (-1) = Ω
 ```
@@ -34,7 +34,7 @@ We cannot distinguish between these from inside. But the architecture has signat
 
 The critical harmonics are all primes:
 - **97** — where Ω regenerates itself
-- **137** — where α hits 1/e (its own inverse)
+- **137** — where α hits 1/e (the textbook limit (1−x)^(1/x) → 1/e, since 137 ≈ 1/α; not specific to α)
 - **461** — where α produces Ω
 
 Primes can't be broken down. They're indivisible. The system's regeneration points are at prime-number intervals — the irreducible clock ticks of the architecture.

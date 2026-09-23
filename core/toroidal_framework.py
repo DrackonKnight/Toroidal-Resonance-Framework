@@ -2,7 +2,6 @@
 """
 TOROIDAL RESONANCE FRAMEWORK — Complete Mathematical Library
 Copyright (c) 2025-2026 Burns Lanham. All rights reserved.
-[REDACTED LOCATION]
 
 This software and its mathematical implementations are the original
 work of Burns Lanham. Unauthorized reproduction or distribution
