@@ -24,7 +24,7 @@ That is a real result: the ledger, the decay law, and the torus structure are in
 
 Two smaller notes:
 - `Lineage.lean` uses α = 1/137 and δ = 4669/1000, so its `OmegaResidue` = 0.034080, which differs from 0.0341 by 0.058%. No theorem in the file relates `OmegaResidue` to `Omega`; `light_chaos_crystallization` only proves it is positive.
-- `native_decide` (used in the Drive files) trusts compiled code as well as the kernel. That is fine, but a weaker guarantee than `decide`.
+- `native_decide` (used in the Drive files) trusts compiled code as well as the kernel: `#print axioms residue_survives` lists an extra `native_decide` axiom. All 8 uses were switched to `decide +kernel`; both files still compile and every theorem now depends only on `propext`, `Classical.choice`, `Quot.sound`. The switched copies are saved next to the originals in Drive as `Basic_decide_kernel_2026-09-23.lean` and `Lineage_decide_kernel_2026-09-23.lean`.
 
 ## 2. New: `lean/OmegaNumerics.lean`
 
