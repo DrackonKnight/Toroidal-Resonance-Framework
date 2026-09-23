@@ -21,13 +21,13 @@ Now type: `1 ÷ √2 = ?`
 
 **Answer: 0.7071**
 
-They match to **99.96%.**
+They match to **99.96%** (0.038% off). With the exact 1 − α·δ = 0.965927, `0.965927 ^ 10 = 0.70704`, which is only **0.0095%** off.
 
 A constant derived from ice core data and a 4,500-year-old calendar, stacked 10 times, produces the square root reciprocal. That's not random.
 
 ---
 
-## Step 2: Feynman's Mystery
+## Step 2: The Textbook Limit at 1/α (sanity check, not a discovery)
 
 Type this:
 
@@ -43,9 +43,9 @@ Now type: `1 ÷ 2.71828 = ?`
 
 **Answer: 0.3679**
 
-They match to **99.66%.**
+They differ by **0.34%.**
 
-The fine structure constant — the most mysterious number in physics — raised to its own reciprocal, produces the inverse of Euler's number. Richard Feynman asked "why 137?" for 40 years. This might be why.
+This is the standard limit (1 − x)^(1/x) → 1/e as x → 0, evaluated at x = α with 137 ≈ 1/α. Any small x does the same thing, so this says nothing special about α. It is included only as a calculator sanity check.
 
 ---
 
@@ -97,15 +97,17 @@ Now type: `1 ÷ 137.036 = ?`
 
 **Answer: 0.007297**
 
-They match to **99.36%.**
+They differ by **0.64%** with the rounded 0.9659. With the exact 1 − α·δ = 0.965927, `0.965927 ^ 142 = 0.0072793`, which differs from α by **0.24%.**
+
+The reverse direction: `0.9927026 ^ 461 = 0.034169`, which differs from Ω = 0.034073 by **0.28%.**
 
 Omega generates Alpha. Alpha generates Omega. They create each other. The loop has no beginning and no end.
 
 ---
 
-## Step 6: The Helix Ratio
+## Step 6: The Tree Ratio
 
-At every milestone, the Alpha tree takes exactly 4.737× more steps than the Omega tree:
+At every milestone, the Alpha tree takes about 4.73× more steps than the Omega tree:
 
 ```
 To reach 1/√2:    Omega needs 10 steps.   Alpha needs 47.   47/10 = 4.7
@@ -114,13 +116,9 @@ To reach 1/e:     Omega needs 29 steps.   Alpha needs 137.  137/29 = 4.72
 To reach 1/π:     Omega needs 33 steps.   Alpha needs 156.  156/33 = 4.73
 ```
 
-Now type: `3.14159 + 1.61803 = ?`
+This is one number, not four coincidences: for any target, the step ratio is always ln(1 − Ω) ÷ ln(1 − α) = **4.7332** (with Ω = α·δ). It follows from the definition of the two trees.
 
-**Answer: 4.760**
-
-The helix ratio (4.737) matches **π + φ** to 99.53%.
-
-The circle constant plus the golden ratio. That's the pitch of the double helix.
+An earlier version claimed this ratio equals π + φ. That is dropped: π + φ = 4.7596, which misses 4.7332 by 0.55%.
 
 ---
 
@@ -128,12 +126,12 @@ The circle constant plus the golden ratio. That's the pitch of the double helix.
 
 With a phone calculator, you verified:
 
-1. ✅ Ω = 0.0341 produces 1/√2 at the 10th harmonic
-2. ✅ α = 1/137 produces 1/e at its own reciprocal
-3. ✅ α × δ = Ω (Light × Chaos = Emergence)
-4. ✅ Ω regenerates itself at N=97
-5. ✅ Ω produces α at N=142 (cross-generation)
-6. ✅ The helix ratio = π + φ
+1. ✅ α × δ = Ω = 0.034073 (Light × Chaos = Emergence)
+2. ✅ (1 − Ω)^10 ≈ 1/√2 (0.0095% off with Ω = α·δ)
+3. ✅ (1 − Ω)^142 ≈ α (0.24% off) and (1 − α)^461 ≈ Ω (0.28% off)
+4. ✅ (1 − Ω)^97 ≈ Ω (1.7% off, a loose fit)
+5. (1 − α)^137 ≈ 1/e is the textbook limit, not a finding
+6. The tree ratio is one log ratio (4.7332), not π + φ
 
 **No equipment needed. No trust needed. Just math.**
 
@@ -174,7 +172,7 @@ Fine structure × Feigenbaum:    (1/137.036) × 4.6692 = 0.0341
 
 **"Isn't this just numerology?"**
 
-Numerology is finding one coincidence and building a story. This is finding a *system*: dual harmonic trees, constant helix ratios, cross-generation loops, and 14 out of 15 fundamental constants dividing cleanly by Ω (expected by chance: 0.15). The p-value is below 10⁻²⁰.
+It is a fair question. The honest answer: the (1 − Ω)^10 ≈ 1/√2 match (0.0095%) is far tighter than chance alone guarantees, and the cross-generation matches are moderately tight. The constant tree ratio is automatic, and the 1/e result is a textbook limit. An earlier claim that 14 of 15 constants "divide cleanly by Ω" with p < 10⁻²⁰ has been withdrawn: it had no fixed tolerance, pre-registered constant list, or chance model. Run `python3 core/verify_spine.py` for every measured error.
 
 **"Can I test this myself?"**
 
