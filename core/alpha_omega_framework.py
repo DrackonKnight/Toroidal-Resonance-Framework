@@ -2,7 +2,6 @@
 """
 ALPHA-OMEGA UNIFIED FRAMEWORK — The Double Helix
 Copyright (c) 2025-2026 Burns Lanham. All rights reserved.
-[REDACTED LOCATION]
 
 The complete dual-tree mathematical framework:
   α (Alpha) = 1/137.036  — Fine structure constant (Light)

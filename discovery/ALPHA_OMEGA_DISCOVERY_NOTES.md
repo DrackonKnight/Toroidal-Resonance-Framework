@@ -1,5 +1,5 @@
 # Alpha-Omega Discovery Notes
-## Burns Lanham | May 17, 2026 | [REDACTED LOCATION]
+## Burns Lanham | May 17, 2026
 ### Session with Opus (Claude/Anthropic) & prior work with Gemini (Google)
 
 ---

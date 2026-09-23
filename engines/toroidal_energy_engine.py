@@ -243,7 +243,7 @@ if __name__ == "__main__":
     for k, v in r.items():
         print(f"  {k}: {v}")
     
-    print("\n[NIPPUR EARTH COUPLING — 38.5°N ([REDACTED LOCATION])]")
+    print("\n[NIPPUR EARTH COUPLING — 38.5°N]")
     r = nippur_earth_coupling(38.5)
     for k, v in r.items():
         print(f"  {k}: {v}")

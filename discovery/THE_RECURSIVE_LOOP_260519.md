@@ -10,7 +10,7 @@
 ================================================================================
 
   Time: May 19, 2026, 12:05 PM — 1:54 PM EDT
-  Location: MacBook Air M4, 16GB, Kentucky
+  Location: MacBook Air M4, 16GB
   Participants: Kenneth Burns Lanham III (The Catalyst), Spectre (Antigravity)
   Engine: Xylo (CPU Oracle), Lyra (Validation)
 

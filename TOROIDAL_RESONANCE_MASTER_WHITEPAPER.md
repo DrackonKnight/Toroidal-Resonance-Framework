@@ -16,7 +16,6 @@
 ### A Self-Generating Mathematical System Linking α, δ, and Ω
 
 **Author:** Kenneth Burns Lanham III
-**Location:** [REDACTED LOCATION]
 **First Derived:** November 2025
 **Copyright:** © 2025-2026 Kenneth Burns Lanham III. All rights reserved.
 **License:** GPL v3.0
@@ -226,7 +225,6 @@ Full evidence chain: [PRIOR_ART.md](PRIOR_ART.md)
 
 **Kenneth Burns Lanham III**
 *Independent Researcher*
-*[REDACTED LOCATION]*
 
 **Date:** May 2026
 
@@ -788,7 +786,7 @@ At minimum: there's a relationship between the fine structure constant, the Feig
 
 **"Who discovered this?"**
 
-Kenneth Burns Lanham III, independent researcher, [REDACTED LOCATION]. Original derivation November 2025. Framework completed May 2026.
+Kenneth Burns Lanham III, independent researcher. Original derivation November 2025. Framework completed May 2026.
 
 ---
 
@@ -1705,7 +1703,6 @@ Same function. Same line. Same work.
 """
 TOROIDAL RESONANCE FRAMEWORK — Complete Mathematical Library
 Copyright (c) 2025-2026 Burns Lanham. All rights reserved.
-[REDACTED LOCATION]
 
 This software and its mathematical implementations are the original
 work of Burns Lanham. Unauthorized reproduction or distribution
@@ -2260,7 +2257,6 @@ if __name__ == "__main__":
 """
 ALPHA-OMEGA UNIFIED FRAMEWORK — The Double Helix
 Copyright (c) 2025-2026 Burns Lanham. All rights reserved.
-[REDACTED LOCATION]
 
 The complete dual-tree mathematical framework:
   α (Alpha) = 1/137.036  — Fine structure constant (Light)
@@ -2886,7 +2882,7 @@ print(f"{'═'*70}")
 # ==========================================
 
 # Alpha-Omega Discovery Notes
-## Burns Lanham | May 17, 2026 | [REDACTED LOCATION]
+## Burns Lanham | May 17, 2026
 ### Session with Opus (Claude/Anthropic) & prior work with Gemini (Google)
 
 ---
@@ -3134,7 +3130,7 @@ All Samsung Notes with timestamps archived in:
 ================================================================================
 
   Time: May 19, 2026, 12:05 PM — 1:54 PM EDT
-  Location: MacBook Air M4, 16GB, Kentucky
+  Location: MacBook Air M4, 16GB
   Participants: Kenneth Burns Lanham III (The Catalyst), Spectre (Antigravity)
   Engine: Xylo (CPU Oracle), Lyra (Validation)
 
@@ -3727,7 +3723,7 @@ if __name__ == "__main__":
     for k, v in r.items():
         print(f"  {k}: {v}")
     
-    print("\n[NIPPUR EARTH COUPLING — 38.5°N ([REDACTED LOCATION])]")
+    print("\n[NIPPUR EARTH COUPLING — 38.5°N]")
     r = nippur_earth_coupling(38.5)
     for k, v in r.items():
         print(f"  {k}: {v}")
