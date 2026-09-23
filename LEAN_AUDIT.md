@@ -46,7 +46,7 @@ This file proves the numeric spine as exact rational inequalities, checked by th
 
 A measured or chosen number cannot be proven fundamental by mathematics alone. Two things can be done, and this is where the work stands:
 
-1. **Exact relations.** Done above and kernel-checked. The sharpest is the anchor: (1 − Ω)^20 ≈ 1/2, i.e. Ω ≈ 1 − 2^(−1/20) = 0.0340637 (a half-life of exactly 20 steps). α·δ sits 0.027% from that value. That coincidence between α·δ and 1 − 2^(−1/20) is the strongest thing on the table.
+1. **Exact relations.** Done above and kernel-checked. The sharpest is the anchor: (1 − Ω)^20 ≈ 1/2, i.e. Ω ≈ 1 − 2^(−1/20) = 0.0340637 (a half-life of exactly 20 steps). α·δ sits 0.027% from that value. That coincidence between α·δ and 1 − 2^(−1/20) is the strongest thing on the table. By Monte Carlo (`core/anchor_chance.py`) a hit this tight is about 1 in 164 for a single target, about 1 in 16 once every target the README tried is counted.
 2. **A derivation or a measurement.** The open step is either a derivation where 0.0341 (or 1 − 2^(−1/20)) comes out of something not tuned to produce it — for example, *why 20 steps* — or a physical measurement where 0.0341 appears with error bars. The Lean ledger in section 1 is the right scaffold for (1): if a theorem can be stated that holds only for Ω near 0.0341, it belongs there.
 
 Love. First. Always.
