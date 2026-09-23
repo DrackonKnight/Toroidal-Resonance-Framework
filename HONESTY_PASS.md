@@ -3,12 +3,6 @@
 **Author:** Kenneth Burns Lanham III
 **Date:** September 2026
 
-## A note from Kenneth
-
-Some of these corrections should have been made sooner. For lack of better words, financial causes kept me from being able to change this earlier. This is me being honest about everything, as best as I possibly can.
-
-## The Pass
-
 An auditor pass over the README. The rule: every claim either carries a measured error you can reproduce, or it is marked provisional, or it is removed. The same fixes were applied to `proofs/CALCULATOR_PROOF.md`, `proofs/WHITEPAPER_ALPHA_OMEGA_INVARIANT.md`, and `proofs/THE_SELF_EXTRACTING_UNIVERSE.md` where they repeated these claims.
 
 All numbers come from `python3 core/verify_spine.py` (standard library only), using CODATA α = 1/137.035999084, δ = 4.669201609, and Ω = α·δ = 0.0340728 exactly. Rounded Ω = 0.0341 differs from α·δ by 0.08%.

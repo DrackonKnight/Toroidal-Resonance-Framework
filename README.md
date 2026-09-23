@@ -3,7 +3,6 @@
 ### A Mathematical System Linking α, δ, and Ω
 
 **Author:** Kenneth Burns Lanham III
-**Location:** [REDACTED LOCATION]
 **First Derived:** November 2025
 **Copyright:** © 2025-2026 Kenneth Burns Lanham III. All rights reserved.
 **License:** GPL v3.0
@@ -74,29 +73,21 @@ $(1 - \alpha)^{461} \approx \Omega$ (error 0.28%). Alpha's power tree reaches Om
 $(1 - \Omega)^{97} \approx \Omega$, error 1.7%. This is near the 1.75% any base guarantees, so it is a loose fit, not evidence of a fixed point.
 
 ### 4. The Textbook Limit at 1/α (not a discovery)
-$(1 - \alpha)^{137} \approx 1/e$ (error 0.34%). This is the standard limit $\lim_{x \to 0}(1-x)^{1/x} = 1/e$ evaluated at x = α, with 137 ≈ 1/α. It holds for any small x and says nothing special about α. It was previously presented as "Feynman's Mystery"; that framing has been withdrawn.
+$(1 - \alpha)^{137} \approx 1/e$ (error 0.34%). This is the standard limit $\lim_{x \to 0}(1-x)^{1/x} = 1/e$ evaluated at x = α, with 137 ≈ 1/α. It holds for any small x and says nothing special about α.
 
 ### 5. The Tree Ratio (one number, not five coincidences)
 The (1−Ω)^N and (1−α)^N trees reach any target at exponents whose ratio is always
 
 $$R = \frac{\ln(1-\Omega)}{\ln(1-\alpha)} = 4.7332$$
 
-That is one log ratio, so hitting 1/√2, 1/2, 1/e, 1/π, 1/φ "at the same ratio" is automatic and does not count as five coincidences. The earlier claim R = 4.737 ≈ π + φ is dropped: 4.737 came from rounded Ω = 0.0341, and π + φ = 4.7596 misses the correct R by 0.55%.
+That is one log ratio, so hitting 1/√2, 1/2, 1/e, 1/π, 1/φ "at the same ratio" is automatic and does not count as five coincidences.
 
 ---
 
-## Provisional (needs-run, not finished results)
+## Work in Progress (not yet tested)
 
 - **Navier-Stokes / toroidal residual.** The idea that still water keeps an Ω ≈ 3.41% residual energy is a hypothesis. There is no simulation or measurement in this repo backing it yet. See [TOROIDAL_NAVIER_STOKES.md](proofs/TOROIDAL_NAVIER_STOKES.md) as a working draft, not a resolution.
-- **Cross-model semantic transfer.** The Qwen → Gemma KV transfer result is withdrawn pending a blind test: the earlier run had priming contamination (the target model saw the facts natively before injection). The whitepaper was pulled from the repo for that reason.
-
-## Removed From This README
-
-- **KV Cache 100% recall.** Removed until an end-to-end test passes. Same-model reinjection is standard KV caching.
-- **"14 of 15 constants divide cleanly by Ω, p < 10⁻²⁰."** Removed. There was no fixed tolerance, pre-registered constant list, or chance model. Any constant larger than about 1.7 gives value/Ω > 50, which is always within 1% of an integer, so most of the list could not fail.
-- **α^ln2 ≈ Ω.** Removed. Measured error is 3.1% (α^ln2 = 0.03303 vs Ω = 0.03407), not the ~1% previously implied.
-
-These corrections came later than they should have; see the note from Kenneth in [HONESTY_PASS.md](HONESTY_PASS.md), which also has the full list of changes and reasoning.
+- **Cross-model semantic transfer.** Needs a blind test before any result is claimed.
 
 ---
 

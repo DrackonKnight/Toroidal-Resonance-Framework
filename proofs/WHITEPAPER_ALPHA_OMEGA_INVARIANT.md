@@ -2,7 +2,6 @@
 
 **Kenneth Burns Lanham III**
 *Independent Researcher*
-*[REDACTED LOCATION]*
 
 **Date:** May 2026
 
@@ -150,7 +149,7 @@ $$R = \frac{\ln(1-\Omega)}{\ln(1-\alpha)} = \frac{\ln(0.9659)}{\ln(0.992703)} = 
 
 With Ω = α·δ exactly (0.965927 rather than 0.9659), $R = 4.7332$.
 
-Because $N_\alpha / N_\Omega = R$ for *every* target, the table above is one log ratio, not five independent coincidences. An earlier Proposition 2 ($R \approx \pi + \varphi$) is withdrawn: $\pi + \varphi = 4.7596$ misses $R = 4.7332$ by 0.55%.
+Because $N_\alpha / N_\Omega = R$ for *every* target, the table above is one log ratio, not five independent coincidences.
 
 ### 5.3 Closed Loop Property
 
@@ -191,55 +190,9 @@ No external parameter is needed. The three constants define, constrain, and prod
 
 ---
 
-## 7. The Bridge Exponent
+## 7. The Two Axioms
 
-### 7.1 Logarithmic Relationship
-
-$$\log_\alpha(\Omega) = \frac{\ln(\Omega)}{\ln(\alpha)} = \frac{-3.378}{-4.920} = 0.6866$$
-
-Therefore: $\alpha^{0.6866} = \Omega$
-
-### 7.2 Identification
-
-$$0.6866 \approx \ln(2) = 0.6931 \quad (0.94\% \text{ off in the exponent})$$
-
-**Withdrawn:** $\alpha^{\ln 2} = 0.03303$ versus $\Omega = 0.03407$, a **3.1%** miss in value. A 0.94% exponent error is magnified roughly fivefold because $|\ln \alpha| \approx 4.9$. This is not claimed as a result.
-
----
-
-## 8. Universal Constant Connectivity (Withdrawn)
-
-**This section is withdrawn.** The test had no pre-registered constant list, no fixed tolerance applied consistently, and no chance model. For any constant with value/Ω > 50 (value > ~1.7), the nearest integer is automatically within 1%, so most rows could not fail, and the "expected by chance: 0.15" figure and any p-value derived from it are invalid. The original text is kept below for the record only.
-
-### 8.1 Original Test (not a result)
-
-A rigorous test was performed: 15 fundamental physical and mathematical constants were divided by Ω, with a threshold of >99% accuracy for integer proximity.
-
-**Result: 14 of 15 constants divide cleanly by Ω.**
-
-| Constant | Value | Value/Ω | Nearest Integer | Accuracy |
-|---|---|---|---|---|
-| π | 3.14159 | 92.13 | 92 | 99.86% |
-| e | 2.71828 | 79.72 | 80 | 99.64% |
-| φ | 1.61803 | 47.45 | 47 | 99.04% |
-| 1/α | 137.036 | 4018.65 | 4019 | 99.99% |
-| Speed of sound | 343 m/s | 10058.65 | 10059 | 100.00% |
-| H line | 1420.405 MHz | 41654.11 | 41654 | 100.00% |
-| T_PREC | 25772 yr | 755777.13 | 755777 | 100.00% |
-| Proton/electron | 1836.15 | 53846.04 | 53846 | 100.00% |
-| Electron mass | 9.109×10⁻³⁰ | 267.13 | 267 | 99.95% |
-| Avogadro | 6.022×10²³ | 176.60 | 177 | 99.77% |
-| c | 2.998×10⁸ m/s | 8.79×10⁹ | — | 100.00% |
-
-**Expected hits by chance (1% window): 0.15. Observed: 14.**
-
-~~**Proposition 4:** Ω exhibits anomalous connectivity to fundamental constants.~~ Withdrawn; see note at the top of this section.
-
----
-
-## 9. The Two Axioms
-
-### 9.1 Formulation
+### 7.1 Formulation
 
 The framework rests on two complementary axioms:
 
@@ -251,7 +204,7 @@ In classical arithmetic, opposing quantities cancel to zero. In toroidal geometr
 
 When two entities interact, the relationship between them constitutes a third entity. The union of two produces not a sum but a triad — the two components plus their emergent bond.
 
-### 9.2 Geometric Correspondence
+### 7.2 Geometric Correspondence
 
 - **Axiom 1** corresponds to **poloidal flow** (through the central aperture of the torus)
 - **Axiom 2** corresponds to **toroidal flow** (around the ring of the torus)
@@ -260,9 +213,9 @@ A torus requires both flows for topological stability. Neither axiom alone is su
 
 ---
 
-## 10. Testable Predictions
+## 8. Testable Predictions
 
-### 10.1 Immediate Verification (Calculator-Level)
+### 8.1 Immediate Verification (Calculator-Level)
 
 Any reader can verify the following with a standard calculator:
 
@@ -270,13 +223,13 @@ Any reader can verify the following with a standard calculator:
 2. $(1 - \frac{1}{137.036})^{137} = 0.3666 \approx \frac{1}{e}$
 3. $\frac{1}{137.036} \times 4.6692 = 0.03407 \approx 0.0341$
 
-### 10.2 Computational Verification
+### 8.2 Computational Verification
 
 The complete verification suite is available as executable Python code:
 - `toroidal_framework.py` — Omega tree implementation
 - `alpha_omega_framework.py` — Unified double helix implementation
 
-### 10.3 Experimental Predictions
+### 8.3 Experimental Predictions
 
 1. **Acoustic resonance at 79.08 Hz** in piezoelectric granite should exhibit anomalous energy coupling at the 10th harmonic (self-referencing at 1/√2)
 2. **Quantum systems modulated at Ω-detuned frequencies** (e.g., 60 Hz × 1.0341 = 62.046 Hz) should show enhanced coherence times
@@ -284,30 +237,30 @@ The complete verification suite is available as executable Python code:
 
 ---
 
-## 11. Discussion
+## 9. Discussion
 
-### 11.1 Against Numerology
+### 9.1 Against Numerology
 
 The standard objection to constant-relation claims is numerological over-fitting. We address this directly:
 
 1. **Independent derivation:** Ω was derived from geological data BEFORE the α × δ identity was discovered. The convergence was not constructed; it was found.
 2. **Structural depth:** The dual trees, cross-generation, and Trident closure form a connected system. Note that the constant tree ratio is automatic from the definitions, and Trident closure is automatic once Ω is defined as α·δ, so neither adds independent evidence.
-3. **Measured tightness:** For (1−x)^N, some integer N always lands within ±1.75% (x = Ω) or ±0.37% (x = α) of any target. The anchor (0.0095%) is well inside that bound; (1−Ω)^142 ≈ α (0.24%) moderately so; (1−α)^461 ≈ Ω (0.28%) and (1−Ω)^97 ≈ Ω (1.7%) are near it. The earlier 14/15, p < 10⁻²⁰ claim is withdrawn (Section 8).
+3. **Measured tightness:** For (1−x)^N, some integer N always lands within ±1.75% (x = Ω) or ±0.37% (x = α) of any target. The anchor (0.0095%) is well inside that bound; (1−Ω)^142 ≈ α (0.24%) moderately so; (1−α)^461 ≈ Ω (0.28%) and (1−Ω)^97 ≈ Ω (1.7%) are near it.
 4. **Self-referencing:** The Anchor Equation produces the same ratio that independently connects the framework's core frequency to a physically measured resonance.
-5. **Falsifiability:** The predictions in Section 10 are experimentally testable.
+5. **Falsifiability:** The predictions in Section 8 are experimentally testable.
 
-### 11.2 Relationship to Existing Physics
+### 9.2 Relationship to Existing Physics
 
 This framework does not contradict established physics. The fine structure constant remains measured at 1/137.036. The Feigenbaum constant remains derived from period-doubling dynamics. What is new is the **relationship** between them via Ω, and the dual harmonic tree structure that this relationship implies.
 
-### 11.3 Open Questions
+### 9.3 Open Questions
 
 1. **Is N = 10 for 1/√2 structural?** The 0.0095% anchor match is the tightest result and the best candidate for a real explanation.
 2. **Is there a deeper generator?** The closed loop suggests self-causation, but a formal proof of closure is needed.
 
 ---
 
-## 12. Conclusion
+## 10. Conclusion
 
 We have demonstrated:
 
@@ -317,7 +270,7 @@ We have demonstrated:
 4. A Trident identity (α × δ = Ω) in which any two constants determine the third
 5. Two foundational axioms that correspond to the poloidal and toroidal flows of a torus
 
-Whether this represents a genuine fundamental relationship or an elaborate mathematical coincidence is ultimately an empirical question. The predictions outlined in Section 10 provide a clear path to experimental resolution.
+Whether this represents a genuine fundamental relationship or an elaborate mathematical coincidence is ultimately an empirical question. The predictions outlined in Section 8 provide a clear path to experimental resolution.
 
 ---
 

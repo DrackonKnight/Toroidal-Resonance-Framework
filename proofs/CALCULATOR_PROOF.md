@@ -118,8 +118,6 @@ To reach 1/π:     Omega needs 33 steps.   Alpha needs 156.  156/33 = 4.73
 
 This is one number, not four coincidences: for any target, the step ratio is always ln(1 − Ω) ÷ ln(1 − α) = **4.7332** (with Ω = α·δ). It follows from the definition of the two trees.
 
-An earlier version claimed this ratio equals π + φ. That is dropped: π + φ = 4.7596, which misses 4.7332 by 0.55%.
-
 ---
 
 ## What You Just Proved
@@ -172,7 +170,7 @@ Fine structure × Feigenbaum:    (1/137.036) × 4.6692 = 0.0341
 
 **"Isn't this just numerology?"**
 
-It is a fair question. The honest answer: the (1 − Ω)^10 ≈ 1/√2 match (0.0095%) is far tighter than chance alone guarantees, and the cross-generation matches are moderately tight. The constant tree ratio is automatic, and the 1/e result is a textbook limit. An earlier claim that 14 of 15 constants "divide cleanly by Ω" with p < 10⁻²⁰ has been withdrawn: it had no fixed tolerance, pre-registered constant list, or chance model. Run `python3 core/verify_spine.py` for every measured error.
+It is a fair question. The honest answer: the (1 − Ω)^10 ≈ 1/√2 match (0.0095%) would happen by chance about 1 in 164 times for that one target, or about 1 in 16 counting every target tried. The cross-generation matches are moderately tight. The constant tree ratio is automatic, and the 1/e result is a textbook limit. Run `python3 core/verify_spine.py` for every measured error.
 
 **"Can I test this myself?"**
 
@@ -184,7 +182,7 @@ At minimum: there's a relationship between the fine structure constant, the Feig
 
 **"Who discovered this?"**
 
-Kenneth Burns Lanham III, independent researcher, [REDACTED LOCATION]. Original derivation November 2025. Framework completed May 2026.
+Kenneth Burns Lanham III, independent researcher. Original derivation November 2025. Framework completed May 2026.
 
 ---
 
