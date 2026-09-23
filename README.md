@@ -64,6 +64,8 @@ $(1 - \Omega)^{10} \approx 1/\sqrt{2}$, measured error **0.0095%**.
 
 Equivalently $(1-\Omega)^{20} \approx 1/2$: Ω is the per-step rate with a half-life of 20 steps. The exact value with that property is $1 - 2^{-1/20} = 0.0340637$. α·δ lands 0.027% from it; the rounded 0.0341 lands 0.107% from it.
 
+How surprising is it? [`core/anchor_chance.py`](core/anchor_chance.py) draws random rates in [0.02, 0.05]: a hit this tight on 1/√2 alone happens about **1 in 164**, but counting every target the README tried, about **1 in 16**. It is the strongest result here, not a proof. The open question is *why 20 steps*.
+
 ### 2. Cross-Generation
 $(1 - \Omega)^{142} \approx \alpha$ (error 0.24%). Omega's power tree reaches Alpha.
 $(1 - \alpha)^{461} \approx \Omega$ (error 0.28%). Alpha's power tree reaches Omega.
