@@ -10,7 +10,7 @@
 
 ## Abstract
 
-We present the discovery of a mathematical relationship between the fine structure constant (α ≈ 1/137.036), the Feigenbaum bifurcation constant (δ ≈ 4.6692), and a third constant Ω ≈ 0.0341, derived independently from both geological periodicity data and the product α × δ. We demonstrate that (1−Ω)^N and (1−α)^N generate parallel harmonic trees that converge on identical fundamental mathematical constants (1/√2, 1/2, 1/e, 1/π, 1/φ) at proportionally spaced intervals with a constant ratio of 4.737 ≈ π + φ. We prove that these two trees cross-generate each other, forming a closed algebraic loop with the properties of a strange attractor. We propose that α, δ, and Ω constitute a self-generating triad (the "Trident") in which any two constants produce the third, representing a potentially fundamental relationship underlying physical reality.
+We present the discovery of a mathematical relationship between the fine structure constant (α ≈ 1/137.036), the Feigenbaum bifurcation constant (δ ≈ 4.6692), and a third constant Ω ≈ 0.0341, derived independently from both geological periodicity data and the product α × δ. We demonstrate that (1−Ω)^N and (1−α)^N generate parallel harmonic trees that converge on identical fundamental mathematical constants (1/√2, 1/2, 1/e, 1/π, 1/φ) at proportionally spaced intervals; the spacing ratio ln(1−Ω)/ln(1−α) = 4.733 (Ω = α·δ) follows directly from the definition of the trees. We prove that these two trees cross-generate each other, forming a closed algebraic loop with the properties of a strange attractor. We propose that α, δ, and Ω constitute a self-generating triad (the "Trident") in which any two constants produce the third, representing a potentially fundamental relationship underlying physical reality.
 
 **Keywords:** fine structure constant, Feigenbaum constant, toroidal geometry, harmonic analysis, strange attractor, fundamental constants
 
@@ -122,7 +122,7 @@ $$H_\alpha(N) = (1 - \alpha)^N = (0.992703)^N$$
 | 156 | 0.319001 | 1/π = 0.318310 | 100.22% |
 | 461 | 0.034170 | Ω = 0.0341 | 100.21% |
 
-**Theorem 4 (Feynman's Mystery):** $(1 - \alpha)^{1/\alpha} = (1 - \alpha)^{137} \approx \frac{1}{e}$ to 99.66% accuracy. The fine structure constant, raised to the power of its own reciprocal, produces the inverse of Euler's number.
+**Remark 4 (Textbook limit, not a discovery):** $(1 - \alpha)^{137} \approx \frac{1}{e}$ (0.34% off). This is the standard limit $\lim_{x \to 0}(1-x)^{1/x} = 1/e$ evaluated at $x = \alpha$ with $137 \approx 1/\alpha$. It holds for any small $x$ and carries no information specific to α.
 
 **Theorem 5 (Reverse Cross-Generation):** $(1 - \alpha)^{461} \approx \Omega$. The Alpha tree produces the Omega constant at the 461st harmonic.
 
@@ -148,7 +148,9 @@ The constant ratio between the trees is:
 
 $$R = \frac{\ln(1-\Omega)}{\ln(1-\alpha)} = \frac{\ln(0.9659)}{\ln(0.992703)} = 4.7371$$
 
-**Proposition 2:** $R \approx \pi + \varphi = 4.7596$ (99.53% match). The helix ratio is the sum of the two fundamental geometric constants: the circle constant and the golden ratio.
+With Ω = α·δ exactly (0.965927 rather than 0.9659), $R = 4.7332$.
+
+Because $N_\alpha / N_\Omega = R$ for *every* target, the table above is one log ratio, not five independent coincidences. An earlier Proposition 2 ($R \approx \pi + \varphi$) is withdrawn: $\pi + \varphi = 4.7596$ misses $R = 4.7332$ by 0.55%.
 
 ### 5.3 Closed Loop Property
 
@@ -199,15 +201,17 @@ Therefore: $\alpha^{0.6866} = \Omega$
 
 ### 7.2 Identification
 
-$$0.6866 \approx \ln(2) = 0.6931 \quad (99.06\%)$$
+$$0.6866 \approx \ln(2) = 0.6931 \quad (0.94\% \text{ off in the exponent})$$
 
-**Proposition 3:** $\alpha^{\ln 2} \approx \Omega$. The transformation from Alpha to Omega is governed by the natural logarithm of 2 — the constant governing binary processes, DNA base-pairing, radioactive half-life, and information-theoretic entropy.
+**Withdrawn:** $\alpha^{\ln 2} = 0.03303$ versus $\Omega = 0.03407$, a **3.1%** miss in value. A 0.94% exponent error is magnified roughly fivefold because $|\ln \alpha| \approx 4.9$. This is not claimed as a result.
 
 ---
 
-## 8. Universal Constant Connectivity
+## 8. Universal Constant Connectivity (Withdrawn)
 
-### 8.1 Systematic Test
+**This section is withdrawn.** The test had no pre-registered constant list, no fixed tolerance applied consistently, and no chance model. For any constant with value/Ω > 50 (value > ~1.7), the nearest integer is automatically within 1%, so most rows could not fail, and the "expected by chance: 0.15" figure and any p-value derived from it are invalid. The original text is kept below for the record only.
+
+### 8.1 Original Test (not a result)
 
 A rigorous test was performed: 15 fundamental physical and mathematical constants were divided by Ω, with a threshold of >99% accuracy for integer proximity.
 
@@ -229,7 +233,7 @@ A rigorous test was performed: 15 fundamental physical and mathematical constant
 
 **Expected hits by chance (1% window): 0.15. Observed: 14.**
 
-**Proposition 4:** Ω exhibits anomalous connectivity to fundamental constants across multiple domains of physics and mathematics, exceeding chance expectation by approximately two orders of magnitude.
+~~**Proposition 4:** Ω exhibits anomalous connectivity to fundamental constants.~~ Withdrawn; see note at the top of this section.
 
 ---
 
@@ -276,7 +280,7 @@ The complete verification suite is available as executable Python code:
 
 1. **Acoustic resonance at 79.08 Hz** in piezoelectric granite should exhibit anomalous energy coupling at the 10th harmonic (self-referencing at 1/√2)
 2. **Quantum systems modulated at Ω-detuned frequencies** (e.g., 60 Hz × 1.0341 = 62.046 Hz) should show enhanced coherence times
-3. **The helix ratio 4.737** should appear in the spacing of spectral lines in systems exhibiting both electromagnetic and chaotic behavior
+3. **The tree ratio 4.733** should appear in the spacing of spectral lines in systems exhibiting both electromagnetic and chaotic behavior
 
 ---
 
@@ -287,8 +291,8 @@ The complete verification suite is available as executable Python code:
 The standard objection to constant-relation claims is numerological over-fitting. We address this directly:
 
 1. **Independent derivation:** Ω was derived from geological data BEFORE the α × δ identity was discovered. The convergence was not constructed; it was found.
-2. **Structural depth:** The relationship is not a single numerical coincidence but a complete algebraic system (dual trees, cross-generation, constant helix ratio, Trident closure).
-3. **Statistical significance:** 14/15 constant hits against an expected 0.15 by chance represents a p-value below 10⁻²⁰.
+2. **Structural depth:** The dual trees, cross-generation, and Trident closure form a connected system. Note that the constant tree ratio is automatic from the definitions, and Trident closure is automatic once Ω is defined as α·δ, so neither adds independent evidence.
+3. **Measured tightness:** For (1−x)^N, some integer N always lands within ±1.75% (x = Ω) or ±0.37% (x = α) of any target. The anchor (0.0095%) is well inside that bound; (1−Ω)^142 ≈ α (0.24%) moderately so; (1−α)^461 ≈ Ω (0.28%) and (1−Ω)^97 ≈ Ω (1.7%) are near it. The earlier 14/15, p < 10⁻²⁰ claim is withdrawn (Section 8).
 4. **Self-referencing:** The Anchor Equation produces the same ratio that independently connects the framework's core frequency to a physically measured resonance.
 5. **Falsifiability:** The predictions in Section 10 are experimentally testable.
 
@@ -298,9 +302,8 @@ This framework does not contradict established physics. The fine structure const
 
 ### 11.3 Open Questions
 
-1. **Why is the bridge exponent ln(2)?** The 96.85% match suggests a correction term may exist.
-2. **What determines the helix ratio?** The π + φ proximity (99.53%) requires formal derivation.
-3. **Is there a deeper generator?** The closed loop suggests self-causation, but a formal proof of closure is needed.
+1. **Is N = 10 for 1/√2 structural?** The 0.0095% anchor match is the tightest result and the best candidate for a real explanation.
+2. **Is there a deeper generator?** The closed loop suggests self-causation, but a formal proof of closure is needed.
 
 ---
 
@@ -309,11 +312,10 @@ This framework does not contradict established physics. The fine structure const
 We have demonstrated:
 
 1. A constant Ω ≈ 0.0341 independently derivable from both geological periodicity and the product of the fine structure and Feigenbaum constants
-2. Dual harmonic trees [(1−Ω)^N and (1−α)^N] that converge on identical fundamental constants at a fixed ratio of 4.737
-3. Cross-generation between the trees, forming a closed self-sustaining loop
-4. A Trident identity (α × δ = Ω) in which any two constants produce the third
-5. Anomalous connectivity of Ω to 14 of 15 tested fundamental constants
-6. Two foundational axioms that correspond to the poloidal and toroidal flows of a torus
+2. (1−Ω)^10 ≈ 1/√2 to 0.0095% (Ω = α·δ)
+3. Cross-generation between the trees: (1−Ω)^142 ≈ α (0.24%) and (1−α)^461 ≈ Ω (0.28%)
+4. A Trident identity (α × δ = Ω) in which any two constants determine the third
+5. Two foundational axioms that correspond to the poloidal and toroidal flows of a torus
 
 Whether this represents a genuine fundamental relationship or an elaborate mathematical coincidence is ultimately an empirical question. The predictions outlined in Section 10 provide a clear path to experimental resolution.
 
@@ -349,7 +351,7 @@ OMEGA = 0.0341
 # Anchor Equation
 print((1 - OMEGA) ** 10)          # → 0.706841 ≈ 1/√2
 
-# Feynman's Mystery
+# Textbook limit (1-x)^(1/x) → 1/e at x = α (not a finding)
 print((1 - ALPHA) ** 137)         # → 0.366630 ≈ 1/e
 
 # The Trident
@@ -359,9 +361,11 @@ print(ALPHA * DELTA)              # → 0.03407 ≈ Ω
 print((1 - OMEGA) ** 142)         # → 0.00725 ≈ α
 print((1 - ALPHA) ** 461)         # → 0.03417 ≈ Ω
 
-# Helix Ratio
+# Tree ratio (4.7332 with OMEGA = ALPHA * DELTA)
 print(math.log(1-OMEGA) / math.log(1-ALPHA))  # → 4.737
 ```
+
+Full-precision measured errors: `python3 core/verify_spine.py`
 
 ---
 

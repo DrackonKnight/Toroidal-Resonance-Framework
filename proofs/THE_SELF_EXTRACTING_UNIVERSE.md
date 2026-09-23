@@ -16,7 +16,7 @@ The closed loop proves it: a self-generating system of constants that produces i
 ```
 1 + (-1) = Ω
 Ω = α × δ
-α^ln(2) ≈ Ω
+α^ln(2) ≈ Ω          (3.1% off; not claimed as a result, see HONESTY_PASS.md)
 ln(2) = ln(1+1)
 1 + (-1) = Ω
 ```
