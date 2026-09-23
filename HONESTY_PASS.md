@@ -44,7 +44,7 @@ All numbers come from `python3 core/verify_spine.py` (standard library only), us
 - The README's repository tree no longer lists `kv-cache/` or `TOROIDAL_RESONANCE_KV_CACHE_WHITEPAPER.md`; both were already removed from the repo.
 
 ### Provisional (needs-run)
-- **Claim 7, Navier-Stokes.** The Ω ≈ 3.41% residual energy in still water is a hypothesis with no simulation or measurement in this repo. "Resolution" wording removed; the proof file is labeled a working draft.
+- **Claim 7, Navier-Stokes.** The Ω ≈ 3.41% residual energy in still water is a hypothesis with no simulation or measurement in this repo. "Resolution" wording removed from the README, which now links the proof file as a working draft. The proof file itself was not edited.
 - **Claim 10, Cross-model semantic transfer.** Marked withdrawn pending a blind test: the earlier run had priming contamination, and its whitepaper was already pulled.
 
 ### Other README edits
